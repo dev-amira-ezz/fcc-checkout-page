@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Checkout Page</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <h1>Checkout</h1>
+    <section>
+      <h2>Your Cart</h2>
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"
+        alt="A plastic, unsolved Rubik's cube."
+      />
+    </section>
+    <section>
+      <h2>Payment Information</h2>
+      <form>
+        <label for="card-name"></label>Cardholder Name:
+        <input type="text" id="card-name" name="card-name" />
+        <label for="card-number">Card Number</label
+        ><input
+          type="text"
+          id="card-number"
+          name="card-number"
+          minlength="12"
+          maxlength="19"
+          required
+          aria-required="true"
+        />
+        <label for="card-expiry">Card Expiry date</label
+        ><input
+          type="text"
+          name="card-expiry"
+          id="card-expiry"
+          placeholder="MM/YY"
+          pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$"
+          title="MM/YY"
+          required
+          aria-required="true"
+        />
+        <label for="card-cvv">Card CVV</label
+        ><input
+          type="text"
+          name="card-cvv"
+          id="card-cvv"
+          pattern="^[0-9]{3}$"
+          title="A three digits number"
+          required
+          aria-required="true"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
 </html>
